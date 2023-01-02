@@ -1,5 +1,4 @@
 import requests
-pip install bs4
 import streamlit as st
 url = 'https://invoice.etax.nat.gov.tw/index.html'
 # 取得網頁html
