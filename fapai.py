@@ -6,6 +6,7 @@ web = requests.get(url)
 # 設置編碼，避免中文亂碼
 web.encoding='utf-8'       
 
+pip install beautifulsoup4
 from bs4 import BeautifulSoup
 # 轉換成標籤樹
 tree = BeautifulSoup(web.text, "html.parser")  
