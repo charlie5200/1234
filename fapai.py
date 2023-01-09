@@ -6,7 +6,6 @@ web = requests.get(url)
 # 設置編碼，避免中文亂碼
 web.encoding='utf-8'       
 
-pip install beautifulsoup4
 from bs4 import BeautifulSoup
 # 轉換成標籤樹
 tree = BeautifulSoup(web.text, "html.parser")  
@@ -31,11 +30,11 @@ while True:
     try:
         # 對獎
         st.title(inputnum = input('輸入發票號碼：'))
-        if inputnum == nss: print('中 1000 萬元！')
-        if inputnum == ns: print('中 200 萬元！')
+        if inputnum == nss: st.write('中 1000 萬元！')
+        if inputnum == ns: st.write('中 200 萬元！')
         for i in n1:
             if inputnum == i:
-                st.write('中 20 萬元！')
+               st.write('中 20 萬元！')
                 break
             if inputnum[-7:] == i[-7:]:
                 st.write('中 4 萬元！')
@@ -53,5 +52,5 @@ while True:
                 st.write('中 200 元！')
                 break
     except:
-      st.write("再接再厲") 
+      st.write("Error") 
       break
