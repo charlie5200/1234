@@ -8,21 +8,21 @@ web.encoding='utf-8'
 
 from bs4 import BeautifulSoup
 # 轉換成標籤樹
-  tree = BeautifulSoup(web.text, "html.parser")  
+tree = BeautifulSoup(web.text, "html.parser")  
 # 取出開獎月份
-  issue = tree.select(".carousel-item")[0].getText(); 
-  st.write(issue)
+issue = tree.select(".carousel-item")[0].getText(); 
+st.write(issue)
 # 取出中獎號碼陣列
-  winlist = tree.select('.container-fluid')[0].select('.etw-tbiggest')  
+winlist = tree.select('.container-fluid')[0].select('.etw-tbiggest')  
 #特別獎
-  nss = winlist[0].getText()  
+nss = winlist[0].getText()  
 #特獎
-  ns = winlist[1].getText() 
+ns = winlist[1].getText() 
 # 頭獎
-  n1 = [winlist[2].getText()[-8:], winlist[3].getText()[-8:], winlist[4].getText()[-8:]] 
-  st.write("特別獎:\n" + "　　"+nss + "\n")
-  st.write("特獎:\n"+"　　" + ns + "\n")
-  st.write("頭獎:")
+n1 = [winlist[2].getText()[-8:], winlist[3].getText()[-8:], winlist[4].getText()[-8:]] 
+st.write("特別獎:\n" + "　　"+nss + "\n")
+st.write("特獎:\n"+"　　" + ns + "\n")
+st.write("頭獎:")
 for j in n1:
   st.write("　　"+j)
 st.write("\n")
