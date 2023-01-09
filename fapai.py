@@ -34,23 +34,23 @@ while True:
         if inputnum == ns: st.write('中 200 萬元！')
         for i in n1:
             if inputnum == i:
-               st.write('中 20 萬元！')
-                 break
+                st.write('中 20 萬元！')
+                break
             if inputnum[-7:] == i[-7:]:
                 st.write('中 4 萬元！')
-                 break
+                break
             if inputnum[-6:] == i[-6:]:
                 st.write('中 1 萬元！')
-                 break
+                break
             if inputnum[-5:] == i[-5:]:
                 st.write('中 4000 元！')
-                 break
+                break
             if inputnum[-4:] == i[-4:]:
                 st.write('中 1000 元！')
-                 break
+                break
             if inputnum[-3:] == i[-3:]:
                 st.write('中 200 元！')
-                 break
+                break
     except:
       st.write("Error") 
       break
