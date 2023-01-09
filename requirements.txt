@@ -1,2 +1,1 @@
-re
-beautifulsoup4
+beautifulsoup == bs4
